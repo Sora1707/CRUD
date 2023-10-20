@@ -1,0 +1,42 @@
+<form
+    method="POST"
+    action="/user/{{user._id}}?_method=PATCH"
+    class="new-user-form"
+>
+    <div class="mb-3">
+        <label for="firstName" class="form-label">First name</label>
+        <input
+            class="form-control"
+            name="firstName"
+            id="firstName"
+            placeholder="First name"
+            value="{{user.firstName}}"
+            required
+        />
+    </div>
+    <div class="mb-3">
+        <label for="lastName" class="form-label">Last name</label>
+        <input
+            class="form-control"
+            name="lastName"
+            id="lastName"
+            placeholder="Last name"
+            value="{{user.lastName}}"
+            required
+        />
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            placeholder="name@example.com"
+            value="{{user.email}}"
+            required
+        />
+    </div>
+
+    <button type="submit" class="btn btn-primary mb-3">Update</button>
+</form>
